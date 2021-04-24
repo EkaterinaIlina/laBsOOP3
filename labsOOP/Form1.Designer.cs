@@ -59,9 +59,23 @@
             this.OsyHradioButton = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.labelRezSp = new System.Windows.Forms.Label();
+            this.textBoxDay = new System.Windows.Forms.TextBox();
+            this.textBoxDist = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.buttonRezSp = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -369,31 +383,109 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.labelRezSp);
+            this.tabPage2.Controls.Add(this.textBoxDay);
+            this.tabPage2.Controls.Add(this.textBoxDist);
+            this.tabPage2.Controls.Add(this.label15);
+            this.tabPage2.Controls.Add(this.label14);
+            this.tabPage2.Controls.Add(this.label13);
+            this.tabPage2.Controls.Add(this.buttonRezSp);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(585, 305);
+            this.tabPage2.Size = new System.Drawing.Size(585, 319);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Задание №2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // labelRezSp
+            // 
+            this.labelRezSp.AutoSize = true;
+            this.labelRezSp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.labelRezSp.Location = new System.Drawing.Point(347, 277);
+            this.labelRezSp.Name = "labelRezSp";
+            this.labelRezSp.Size = new System.Drawing.Size(0, 24);
+            this.labelRezSp.TabIndex = 9;
+            // 
+            // textBoxDay
+            // 
+            this.textBoxDay.Location = new System.Drawing.Point(160, 186);
+            this.textBoxDay.Name = "textBoxDay";
+            this.textBoxDay.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDay.TabIndex = 8;
+            this.textBoxDay.TextChanged += new System.EventHandler(this.textBoxDay_TextChanged);
+            this.textBoxDay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDay_KeyPress);
+            // 
+            // textBoxDist
+            // 
+            this.textBoxDist.Location = new System.Drawing.Point(253, 145);
+            this.textBoxDist.Name = "textBoxDist";
+            this.textBoxDist.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDist.TabIndex = 7;
+            this.textBoxDist.TextChanged += new System.EventHandler(this.textBoxDist_TextChanged);
+            this.textBoxDist.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDist_KeyPress);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(239, 285);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(92, 13);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Суммарный путь";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(38, 193);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(93, 13);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Количество дней";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(38, 148);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(192, 13);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Количество километров в 1-ый день";
+            // 
+            // buttonRezSp
+            // 
+            this.buttonRezSp.Location = new System.Drawing.Point(482, 280);
+            this.buttonRezSp.Name = "buttonRezSp";
+            this.buttonRezSp.Size = new System.Drawing.Size(75, 23);
+            this.buttonRezSp.TabIndex = 2;
+            this.buttonRezSp.Text = "Вычислить";
+            this.buttonRezSp.UseVisualStyleBackColor = true;
+            this.buttonRezSp.Click += new System.EventHandler(this.buttonRezSp_Click);
             // 
             // label2
             // 
             this.label2.Location = new System.Drawing.Point(6, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(571, 73);
+            this.label2.Size = new System.Drawing.Size(571, 88);
             this.label2.TabIndex = 1;
             this.label2.Text = resources.GetString("label2.Text");
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label16);
+            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.textBox2);
+            this.tabPage3.Controls.Add(this.label17);
+            this.tabPage3.Controls.Add(this.label18);
+            this.tabPage3.Controls.Add(this.label19);
+            this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(585, 305);
+            this.tabPage3.Size = new System.Drawing.Size(585, 319);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Задание №3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -406,6 +498,65 @@
             this.label3.TabIndex = 2;
             this.label3.Text = resources.GetString("label3.Text");
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label16.Location = new System.Drawing.Point(337, 256);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(0, 24);
+            this.label16.TabIndex = 16;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(150, 165);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 15;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(243, 124);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 14;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(229, 264);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(92, 13);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "Суммарный путь";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(28, 172);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(93, 13);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "Количество дней";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(28, 127);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(152, 13);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "Начальное количество амёб";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(472, 259);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Вычислить";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Lab1Form
             // 
@@ -429,7 +580,9 @@
             this.IzmgroupBox.ResumeLayout(false);
             this.IzmgroupBox.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -469,6 +622,20 @@
         private System.Windows.Forms.TextBox textBoxStorC;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBoxDay;
+        private System.Windows.Forms.TextBox textBoxDist;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button buttonRezSp;
+        private System.Windows.Forms.Label labelRezSp;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button button1;
     }
 }
 

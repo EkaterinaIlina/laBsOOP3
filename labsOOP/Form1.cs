@@ -14,6 +14,8 @@ namespace labsOOP
     public partial class Lab1Form : Form
     {
         double a, h, b, ungle, c;
+        double distance;
+        int CountDay;
        
         public Lab1Form()
         {
@@ -155,6 +157,52 @@ namespace labsOOP
             {
                 e.Handled = true;
             }
+        }
+
+        private void textBoxDist_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxDist.Text != "")
+                distance = double.Parse(textBoxDist.Text);
+            else
+                distance = 0;
+        }
+
+        private void textBoxDist_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8 && number != 44) //цифры, клавиша BackSpace и запятая а ASCII
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxDay_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxDay.Text != "")
+                CountDay = int.Parse(textBoxDay.Text);
+            else
+                CountDay = 0;
+        }
+
+        private void textBoxDay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8) //цифры, клавиша BackSpace и запятая а ASCII
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void buttonRezSp_Click(object sender, EventArgs e)
+        {
+           
+            double RezDist = distance;
+            for (int i = 1; i < CountDay; i++)
+            {
+                distance += distance * 0.1;
+                RezDist += distance;
+            }
+            labelRezSp.Text = RezDist.ToString();
         }
 
         private void OsyHradioButton_CheckedChanged(object sender, EventArgs e)
