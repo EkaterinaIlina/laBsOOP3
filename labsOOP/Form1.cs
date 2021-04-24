@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -15,7 +9,8 @@ namespace labsOOP
     {
         double a, h, b, ungle, c;
         double distance;
-        int CountDay;
+        int countDay;
+        int counHours, countAm=2;
        
         public Lab1Form()
         {
@@ -179,9 +174,9 @@ namespace labsOOP
         private void textBoxDay_TextChanged(object sender, EventArgs e)
         {
             if (textBoxDay.Text != "")
-                CountDay = int.Parse(textBoxDay.Text);
+                countDay = int.Parse(textBoxDay.Text);
             else
-                CountDay = 0;
+                countDay = 0;
         }
 
         private void textBoxDay_KeyPress(object sender, KeyPressEventArgs e)
@@ -197,12 +192,73 @@ namespace labsOOP
         {
            
             double RezDist = distance;
-            for (int i = 1; i < CountDay; i++)
+            for (int i = 1; i < countDay; i++)
             {
                 distance += distance * 0.1;
                 RezDist += distance;
             }
             labelRezSp.Text = RezDist.ToString();
+        }
+
+        private void buttonRezAm_Click(object sender, EventArgs e)
+        {
+            DataColumn dataColumnHours = new DataColumn("Часы", typeof(int));
+            dataColumnHours.ReadOnly = true;
+            DataColumn dataColumnAm = new DataColumn("Количество амёб", typeof(int));
+            dataColumnHours.ReadOnly = true;
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add(dataColumnHours);
+            dataTable.Columns.Add(dataColumnAm);
+            countAm = int.Parse(textBoxCounAm.Text);
+            if (counHours % 3 == 0) {
+                for (int i = 0; i <= counHours; i+=3)
+                {
+                    DataRow dr = dataTable.NewRow();
+                    dr[0] = i;
+                    dr[1] = countAm;
+                    dataTable.Rows.Add(dr);
+                    countAm *= 2;
+                }
+                dataGridView1.DataSource = dataTable;
+                dataGridView1.RowHeadersVisible = false;
+            }
+            else
+                MessageBox.Show("Введите число кратное 3");
+
+        }
+
+        private void textBoxCounAm_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxCounAm.Text != "")
+                countAm = int.Parse(textBoxCounAm.Text);
+            else
+                countAm = 0;
+        }
+
+        private void textBoxHours_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxHours.Text != "")
+                counHours = int.Parse(textBoxHours.Text);
+            else
+                counHours = 0;
+        }
+
+        private void textBoxCounAm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8) //цифры, клавиша BackSpace и запятая а ASCII
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxHours_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 8) //цифры, клавиша BackSpace и запятая а ASCII
+            {
+                e.Handled = true;
+            }
         }
 
         private void OsyHradioButton_CheckedChanged(object sender, EventArgs e)

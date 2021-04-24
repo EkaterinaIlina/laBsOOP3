@@ -69,13 +69,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.textBoxHours = new System.Windows.Forms.TextBox();
+            this.textBoxCounAm = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonRezAm = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -84,6 +83,7 @@
             this.IzmgroupBox.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -474,13 +474,12 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.label16);
-            this.tabPage3.Controls.Add(this.textBox1);
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.label17);
+            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Controls.Add(this.textBoxHours);
+            this.tabPage3.Controls.Add(this.textBoxCounAm);
             this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Controls.Add(this.label19);
-            this.tabPage3.Controls.Add(this.button1);
+            this.tabPage3.Controls.Add(this.buttonRezAm);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -499,64 +498,63 @@
             this.label3.Text = resources.GetString("label3.Text");
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label16
+            // textBoxHours
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label16.Location = new System.Drawing.Point(337, 256);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(0, 24);
-            this.label16.TabIndex = 16;
+            this.textBoxHours.Location = new System.Drawing.Point(139, 128);
+            this.textBoxHours.Name = "textBoxHours";
+            this.textBoxHours.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHours.TabIndex = 15;
+            this.textBoxHours.TextChanged += new System.EventHandler(this.textBoxHours_TextChanged);
+            this.textBoxHours.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHours_KeyPress);
             // 
-            // textBox1
+            // textBoxCounAm
             // 
-            this.textBox1.Location = new System.Drawing.Point(150, 165);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 15;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(243, 124);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 14;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(229, 264);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(92, 13);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "Суммарный путь";
+            this.textBoxCounAm.Location = new System.Drawing.Point(232, 87);
+            this.textBoxCounAm.Name = "textBoxCounAm";
+            this.textBoxCounAm.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCounAm.TabIndex = 14;
+            this.textBoxCounAm.TextChanged += new System.EventHandler(this.textBoxCounAm_TextChanged);
+            this.textBoxCounAm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCounAm_KeyPress);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(28, 172);
+            this.label18.Location = new System.Drawing.Point(17, 135);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(93, 13);
+            this.label18.Size = new System.Drawing.Size(98, 13);
             this.label18.TabIndex = 12;
-            this.label18.Text = "Количество дней";
+            this.label18.Text = "Количество часов";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(28, 127);
+            this.label19.Location = new System.Drawing.Point(17, 90);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(152, 13);
             this.label19.TabIndex = 11;
             this.label19.Text = "Начальное количество амёб";
             // 
-            // button1
+            // buttonRezAm
             // 
-            this.button1.Location = new System.Drawing.Point(472, 259);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Вычислить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonRezAm.Location = new System.Drawing.Point(487, 293);
+            this.buttonRezAm.Name = "buttonRezAm";
+            this.buttonRezAm.Size = new System.Drawing.Size(75, 23);
+            this.buttonRezAm.TabIndex = 10;
+            this.buttonRezAm.Text = "Вычислить";
+            this.buttonRezAm.UseVisualStyleBackColor = true;
+            this.buttonRezAm.Click += new System.EventHandler(this.buttonRezAm_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(376, 79);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(186, 208);
+            this.dataGridView1.TabIndex = 16;
             // 
             // Lab1Form
             // 
@@ -583,6 +581,7 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -629,13 +628,12 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button buttonRezSp;
         private System.Windows.Forms.Label labelRezSp;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBoxHours;
+        private System.Windows.Forms.TextBox textBoxCounAm;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonRezAm;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
