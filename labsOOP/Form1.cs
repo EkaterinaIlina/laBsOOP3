@@ -186,46 +186,7 @@ namespace labsOOP
             {
                 e.Handled = true;
             }
-        }
-
-        private void buttonRezSp_Click(object sender, EventArgs e)
-        {
-           
-            double RezDist = distance;
-            for (int i = 1; i < countDay; i++)
-            {
-                distance += distance * 0.1;
-                RezDist += distance;
-            }
-            labelRezSp.Text = RezDist.ToString();
-        }
-
-        private void buttonRezAm_Click(object sender, EventArgs e)
-        {
-            DataColumn dataColumnHours = new DataColumn("Часы", typeof(int));
-            dataColumnHours.ReadOnly = true;
-            DataColumn dataColumnAm = new DataColumn("Количество амёб", typeof(int));
-            dataColumnHours.ReadOnly = true;
-            DataTable dataTable = new DataTable();
-            dataTable.Columns.Add(dataColumnHours);
-            dataTable.Columns.Add(dataColumnAm);
-            countAm = int.Parse(textBoxCounAm.Text);
-            if (counHours % 3 == 0) {
-                for (int i = 0; i <= counHours; i+=3)
-                {
-                    DataRow dr = dataTable.NewRow();
-                    dr[0] = i;
-                    dr[1] = countAm;
-                    dataTable.Rows.Add(dr);
-                    countAm *= 2;
-                }
-                dataGridView1.DataSource = dataTable;
-                dataGridView1.RowHeadersVisible = false;
-            }
-            else
-                MessageBox.Show("Введите число кратное 3");
-
-        }
+        }    
 
         private void textBoxCounAm_TextChanged(object sender, EventArgs e)
         {
@@ -298,6 +259,44 @@ namespace labsOOP
             }
             else
                 MessageBox.Show("Выберите группу измерений");
+        }
+        private void buttonRezSp_Click(object sender, EventArgs e)
+        {
+
+            double RezDist = distance;
+            for (int i = 1; i < countDay; i++)
+            {
+                distance += distance * 0.1;
+                RezDist += distance;
+            }
+            labelRezSp.Text = RezDist.ToString();
+        }
+        private void buttonRezAm_Click(object sender, EventArgs e)
+        {
+            DataColumn dataColumnHours = new DataColumn("Часы", typeof(int));
+            dataColumnHours.ReadOnly = true;
+            DataColumn dataColumnAm = new DataColumn("Количество амёб", typeof(int));
+            dataColumnHours.ReadOnly = true;
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add(dataColumnHours);
+            dataTable.Columns.Add(dataColumnAm);
+            countAm = int.Parse(textBoxCounAm.Text);
+            if (counHours % 3 == 0)
+            {
+                for (int i = 0; i <= counHours; i += 3)
+                {
+                    DataRow dr = dataTable.NewRow();
+                    dr[0] = i;
+                    dr[1] = countAm;
+                    dataTable.Rows.Add(dr);
+                    countAm *= 2;
+                }
+                dataGridView1.DataSource = dataTable;
+                dataGridView1.RowHeadersVisible = false;
+            }
+            else
+                MessageBox.Show("Введите число кратное 3");
+
         }
     }
 }
