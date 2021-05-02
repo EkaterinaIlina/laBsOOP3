@@ -16,7 +16,7 @@ namespace labsOOP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Lab1Form());
+            Application.Run(new FormMenu());
         }
     }
 }

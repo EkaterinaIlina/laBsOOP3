@@ -5,14 +5,14 @@ using System.Windows.Forms;
 
 namespace labsOOP
 {
-    public partial class Lab1Form : Form
+    public partial class FormLab5 : Form
     {
         double a, h, b, ungle, c;
         double distance;
         int countDay;
         int counHours, countAm=2;
        
-        public Lab1Form()
+        public FormLab5()
         {
             InitializeComponent();
         }

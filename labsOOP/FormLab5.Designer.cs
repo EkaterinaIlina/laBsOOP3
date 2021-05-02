@@ -1,6 +1,6 @@
 ﻿namespace labsOOP
 {
-    partial class Lab1Form
+    partial class FormLab5
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lab1Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLab5));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -38,13 +38,13 @@
             this.textBoxStorC = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxOsn = new System.Windows.Forms.TextBox();
             this.textBoxH = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.textBoxStA = new System.Windows.Forms.TextBox();
             this.textBoxStB = new System.Windows.Forms.TextBox();
             this.textBoxAngle = new System.Windows.Forms.TextBox();
@@ -68,18 +68,18 @@
             this.buttonRezSp = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBoxHours = new System.Windows.Forms.TextBox();
             this.textBoxCounAm = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.buttonRezAm = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.IzmgroupBox.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -100,8 +100,8 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.panel3);
-            this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.SquareButton);
             this.tabPage1.Controls.Add(this.Rezlabel);
             this.tabPage1.Controls.Add(this.label4);
@@ -123,7 +123,7 @@
             this.panel3.Controls.Add(this.textBoxStorC);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Location = new System.Drawing.Point(12, 170);
+            this.panel3.Location = new System.Drawing.Point(15, 167);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(535, 115);
             this.panel3.TabIndex = 5;
@@ -132,11 +132,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(296, 16);
+            this.label10.Location = new System.Drawing.Point(286, 16);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 13);
+            this.label10.Size = new System.Drawing.Size(78, 13);
             this.label10.TabIndex = 5;
-            this.label10.Text = "Сторона b";
+            this.label10.Text = "Сторона b, см";
             // 
             // textBoxStorA
             // 
@@ -170,66 +170,18 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(151, 55);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 13);
+            this.label11.Size = new System.Drawing.Size(78, 13);
             this.label11.TabIndex = 3;
-            this.label11.Text = "Сторона c";
+            this.label11.Text = "Сторона c, см";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(52, 16);
+            this.label12.Location = new System.Drawing.Point(42, 16);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 13);
+            this.label12.Size = new System.Drawing.Size(78, 13);
             this.label12.TabIndex = 2;
-            this.label12.Text = "Сторона a";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBoxOsn);
-            this.panel1.Controls.Add(this.textBoxH);
-            this.panel1.Location = new System.Drawing.Point(9, 176);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(331, 85);
-            this.panel1.TabIndex = 6;
-            this.panel1.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 51);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Высота";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Основание";
-            // 
-            // textBoxOsn
-            // 
-            this.textBoxOsn.Location = new System.Drawing.Point(116, 16);
-            this.textBoxOsn.Name = "textBoxOsn";
-            this.textBoxOsn.Size = new System.Drawing.Size(100, 20);
-            this.textBoxOsn.TabIndex = 0;
-            this.textBoxOsn.TextChanged += new System.EventHandler(this.textBoxOsn_TextChanged);
-            this.textBoxOsn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxOsn_KeyPress);
-            // 
-            // textBoxH
-            // 
-            this.textBoxH.Location = new System.Drawing.Point(116, 48);
-            this.textBoxH.Name = "textBoxH";
-            this.textBoxH.Size = new System.Drawing.Size(100, 20);
-            this.textBoxH.TabIndex = 1;
-            this.textBoxH.TextChanged += new System.EventHandler(this.textBoxH_TextChanged);
-            this.textBoxH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxH_KeyPress);
+            this.label12.Text = "Сторона a, см";
             // 
             // panel2
             // 
@@ -248,11 +200,59 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(296, 16);
+            this.label9.Location = new System.Drawing.Point(286, 16);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 13);
+            this.label9.Size = new System.Drawing.Size(78, 13);
             this.label9.TabIndex = 5;
-            this.label9.Text = "Сторона b";
+            this.label9.Text = "Сторона b, см";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.textBoxOsn);
+            this.panel1.Controls.Add(this.textBoxH);
+            this.panel1.Location = new System.Drawing.Point(50, 179);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(331, 85);
+            this.panel1.TabIndex = 6;
+            this.panel1.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 51);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Высота, см";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Основание, см";
+            // 
+            // textBoxOsn
+            // 
+            this.textBoxOsn.Location = new System.Drawing.Point(116, 16);
+            this.textBoxOsn.Name = "textBoxOsn";
+            this.textBoxOsn.Size = new System.Drawing.Size(100, 20);
+            this.textBoxOsn.TabIndex = 0;
+            this.textBoxOsn.TextChanged += new System.EventHandler(this.textBoxOsn_TextChanged);
+            this.textBoxOsn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxOsn_KeyPress);
+            // 
+            // textBoxH
+            // 
+            this.textBoxH.Location = new System.Drawing.Point(116, 48);
+            this.textBoxH.Name = "textBoxH";
+            this.textBoxH.Size = new System.Drawing.Size(100, 20);
+            this.textBoxH.TabIndex = 1;
+            this.textBoxH.TextChanged += new System.EventHandler(this.textBoxH_TextChanged);
+            this.textBoxH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxH_KeyPress);
             // 
             // textBoxStA
             // 
@@ -284,20 +284,20 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(151, 55);
+            this.label7.Location = new System.Drawing.Point(127, 55);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 13);
+            this.label7.Size = new System.Drawing.Size(121, 13);
             this.label7.TabIndex = 3;
-            this.label7.Text = "Угол между ними";
+            this.label7.Text = "Угол между ними, рад";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(52, 16);
+            this.label8.Location = new System.Drawing.Point(42, 16);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.Size = new System.Drawing.Size(78, 13);
             this.label8.TabIndex = 2;
-            this.label8.Text = "Сторона a";
+            this.label8.Text = "Сторона a, см";
             // 
             // SquareButton
             // 
@@ -323,9 +323,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(263, 296);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Площадь = ";
+            this.label4.Text = "Площадь, см = ";
             // 
             // IzmgroupBox
             // 
@@ -429,11 +429,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(239, 285);
+            this.label15.Location = new System.Drawing.Point(157, 285);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(92, 13);
+            this.label15.Size = new System.Drawing.Size(164, 13);
             this.label15.TabIndex = 5;
-            this.label15.Text = "Суммарный путь";
+            this.label15.Text = "Суммарный путь в километрах";
             // 
             // label14
             // 
@@ -489,14 +489,17 @@
             this.tabPage3.Text = "Задание №3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // dataGridView1
             // 
-            this.label3.Location = new System.Drawing.Point(3, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(571, 73);
-            this.label3.TabIndex = 2;
-            this.label3.Text = resources.GetString("label3.Text");
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(376, 79);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(186, 208);
+            this.dataGridView1.TabIndex = 16;
             // 
             // textBoxHours
             // 
@@ -544,37 +547,34 @@
             this.buttonRezAm.UseVisualStyleBackColor = true;
             this.buttonRezAm.Click += new System.EventHandler(this.buttonRezAm_Click);
             // 
-            // dataGridView1
+            // label3
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(376, 79);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(186, 208);
-            this.dataGridView1.TabIndex = 16;
+            this.label3.Location = new System.Drawing.Point(3, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(571, 73);
+            this.label3.TabIndex = 2;
+            this.label3.Text = resources.GetString("label3.Text");
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Lab1Form
+            // FormLab5
             // 
             this.AcceptButton = this.SquareButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(615, 362);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Lab1Form";
+            this.Name = "FormLab5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Лабораторная работа №1";
+            this.Text = "Лабораторная работа №5";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.IzmgroupBox.ResumeLayout(false);
             this.IzmgroupBox.PerformLayout();
             this.tabPage2.ResumeLayout(false);
