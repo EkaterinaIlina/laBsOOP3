@@ -33,11 +33,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labelRezPrice = new System.Windows.Forms.Label();
             this.labelHelp = new System.Windows.Forms.Label();
+            this.numericUpDownCount = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCount)).BeginInit();
             this.SuspendLayout();
             // 
             // checkedListBoxMenu
             // 
-            this.checkedListBoxMenu.CheckOnClick = true;
+            this.checkedListBoxMenu.Font = new System.Drawing.Font("Engravers MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkedListBoxMenu.FormattingEnabled = true;
             this.checkedListBoxMenu.Items.AddRange(new object[] {
             "Борщ, 135 руб",
@@ -67,7 +69,7 @@
             "Фокачча с сыром, 60 руб",
             "Чизкейк Нью-Йорк, 160 руб",
             "Эклер, 65 руб"});
-            this.checkedListBoxMenu.Location = new System.Drawing.Point(23, 44);
+            this.checkedListBoxMenu.Location = new System.Drawing.Point(23, 51);
             this.checkedListBoxMenu.Name = "checkedListBoxMenu";
             this.checkedListBoxMenu.Size = new System.Drawing.Size(247, 409);
             this.checkedListBoxMenu.TabIndex = 0;
@@ -88,7 +90,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(309, 156);
+            this.label2.Location = new System.Drawing.Point(382, 161);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 32);
             this.label2.TabIndex = 2;
@@ -99,13 +101,15 @@
             // 
             this.labelRezPrice.AutoSize = true;
             this.labelRezPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRezPrice.Location = new System.Drawing.Point(348, 214);
+            this.labelRezPrice.Location = new System.Drawing.Point(430, 206);
             this.labelRezPrice.Name = "labelRezPrice";
             this.labelRezPrice.Size = new System.Drawing.Size(0, 24);
             this.labelRezPrice.TabIndex = 3;
+            this.labelRezPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelHelp
             // 
+            this.labelHelp.AccessibleDescription = "yer";
             this.labelHelp.AutoSize = true;
             this.labelHelp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -113,13 +117,24 @@
             this.labelHelp.Name = "labelHelp";
             this.labelHelp.Size = new System.Drawing.Size(18, 20);
             this.labelHelp.TabIndex = 4;
+            this.labelHelp.Tag = "";
             this.labelHelp.Text = "?";
+            // 
+            // numericUpDownCount
+            // 
+            this.numericUpDownCount.Enabled = false;
+            this.numericUpDownCount.Location = new System.Drawing.Point(324, 51);
+            this.numericUpDownCount.Name = "numericUpDownCount";
+            this.numericUpDownCount.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownCount.TabIndex = 5;
+            this.numericUpDownCount.ValueChanged += new System.EventHandler(this.numericUpDownCount_ValueChanged);
             // 
             // FormLab6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 472);
+            this.ClientSize = new System.Drawing.Size(564, 472);
+            this.Controls.Add(this.numericUpDownCount);
             this.Controls.Add(this.labelHelp);
             this.Controls.Add(this.labelRezPrice);
             this.Controls.Add(this.label2);
@@ -127,17 +142,18 @@
             this.Controls.Add(this.checkedListBoxMenu);
             this.Name = "FormLab6";
             this.Text = "Лабораторная работа №6";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckedListBox checkedListBoxMenu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelRezPrice;
         private System.Windows.Forms.Label labelHelp;
+        private System.Windows.Forms.CheckedListBox checkedListBoxMenu;
+        private System.Windows.Forms.NumericUpDown numericUpDownCount;
     }
 }
