@@ -34,6 +34,7 @@
             this.labelRezPrice = new System.Windows.Forms.Label();
             this.labelHelp = new System.Windows.Forms.Label();
             this.numericUpDownCount = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,18 +91,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(382, 161);
+            this.label2.Location = new System.Drawing.Point(304, 152);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 32);
             this.label2.TabIndex = 2;
             this.label2.Text = "Итоговая стоимость,\r\nв рублях";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // labelRezPrice
             // 
             this.labelRezPrice.AutoSize = true;
             this.labelRezPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRezPrice.Location = new System.Drawing.Point(430, 206);
+            this.labelRezPrice.Location = new System.Drawing.Point(303, 204);
             this.labelRezPrice.Name = "labelRezPrice";
             this.labelRezPrice.Size = new System.Drawing.Size(0, 24);
             this.labelRezPrice.TabIndex = 3;
@@ -123,17 +124,27 @@
             // numericUpDownCount
             // 
             this.numericUpDownCount.Enabled = false;
-            this.numericUpDownCount.Location = new System.Drawing.Point(324, 51);
+            this.numericUpDownCount.Location = new System.Drawing.Point(307, 84);
             this.numericUpDownCount.Name = "numericUpDownCount";
             this.numericUpDownCount.Size = new System.Drawing.Size(120, 20);
             this.numericUpDownCount.TabIndex = 5;
             this.numericUpDownCount.ValueChanged += new System.EventHandler(this.numericUpDownCount_ValueChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(304, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(155, 26);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Укажите количество порций \r\nвыбранного блюда";
+            // 
             // FormLab6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 472);
+            this.ClientSize = new System.Drawing.Size(522, 472);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.numericUpDownCount);
             this.Controls.Add(this.labelHelp);
             this.Controls.Add(this.labelRezPrice);
@@ -155,5 +166,6 @@
         private System.Windows.Forms.Label labelHelp;
         private System.Windows.Forms.CheckedListBox checkedListBoxMenu;
         private System.Windows.Forms.NumericUpDown numericUpDownCount;
+        private System.Windows.Forms.Label label3;
     }
 }

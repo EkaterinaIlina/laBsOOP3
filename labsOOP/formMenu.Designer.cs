@@ -31,6 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabelLab5 = new System.Windows.Forms.LinkLabel();
             this.linkLabelLab6 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelLab7 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelLab8 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelLab9 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -66,7 +69,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabelLab6.AutoSize = true;
             this.linkLabelLab6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkLabelLab6.Location = new System.Drawing.Point(64, 104);
+            this.linkLabelLab6.Location = new System.Drawing.Point(64, 108);
             this.linkLabelLab6.Name = "linkLabelLab6";
             this.linkLabelLab6.Size = new System.Drawing.Size(177, 16);
             this.linkLabelLab6.TabIndex = 2;
@@ -75,11 +78,62 @@
             this.linkLabelLab6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabelLab6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLab6_LinkClicked);
             // 
+            // linkLabelLab7
+            // 
+            this.linkLabelLab7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabelLab7.AutoSize = true;
+            this.linkLabelLab7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.linkLabelLab7.Location = new System.Drawing.Point(64, 140);
+            this.linkLabelLab7.Name = "linkLabelLab7";
+            this.linkLabelLab7.Size = new System.Drawing.Size(177, 16);
+            this.linkLabelLab7.TabIndex = 3;
+            this.linkLabelLab7.TabStop = true;
+            this.linkLabelLab7.Text = "Лабораторная работа №7";
+            this.linkLabelLab7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabelLab7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLab7_LinkClicked);
+            // 
+            // linkLabelLab8
+            // 
+            this.linkLabelLab8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabelLab8.AutoSize = true;
+            this.linkLabelLab8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.linkLabelLab8.Location = new System.Drawing.Point(64, 176);
+            this.linkLabelLab8.Name = "linkLabelLab8";
+            this.linkLabelLab8.Size = new System.Drawing.Size(177, 16);
+            this.linkLabelLab8.TabIndex = 4;
+            this.linkLabelLab8.TabStop = true;
+            this.linkLabelLab8.Text = "Лабораторная работа №8";
+            this.linkLabelLab8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabelLab8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLab8_LinkClicked);
+            // 
+            // linkLabelLab9
+            // 
+            this.linkLabelLab9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabelLab9.AutoSize = true;
+            this.linkLabelLab9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.linkLabelLab9.Location = new System.Drawing.Point(64, 210);
+            this.linkLabelLab9.Name = "linkLabelLab9";
+            this.linkLabelLab9.Size = new System.Drawing.Size(177, 16);
+            this.linkLabelLab9.TabIndex = 5;
+            this.linkLabelLab9.TabStop = true;
+            this.linkLabelLab9.Text = "Лабораторная работа №9";
+            this.linkLabelLab9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabelLab9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLab9_LinkClicked);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(308, 308);
+            this.Controls.Add(this.linkLabelLab9);
+            this.Controls.Add(this.linkLabelLab8);
+            this.Controls.Add(this.linkLabelLab7);
             this.Controls.Add(this.linkLabelLab6);
             this.Controls.Add(this.linkLabelLab5);
             this.Controls.Add(this.label1);
@@ -95,5 +149,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabelLab5;
         private System.Windows.Forms.LinkLabel linkLabelLab6;
+        private System.Windows.Forms.LinkLabel linkLabelLab7;
+        private System.Windows.Forms.LinkLabel linkLabelLab8;
+        private System.Windows.Forms.LinkLabel linkLabelLab9;
     }
 }

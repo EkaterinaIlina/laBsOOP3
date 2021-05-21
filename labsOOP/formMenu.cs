@@ -28,5 +28,21 @@ namespace labsOOP
             FormLab6 formLab6 = new FormLab6();
             formLab6.ShowDialog();
         }
+
+        private void linkLabelLab7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormLab7 formLab7 = new FormLab7();
+            formLab7.ShowDialog();
+        }
+
+        private void linkLabelLab8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void linkLabelLab9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }
