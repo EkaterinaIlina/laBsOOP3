@@ -238,6 +238,7 @@
             this.buttonRezult.TabIndex = 19;
             this.buttonRezult.Text = "=";
             this.buttonRezult.UseVisualStyleBackColor = true;
+            this.buttonRezult.Click += new System.EventHandler(this.buttonRezult_Click);
             // 
             // FormLab7
             // 
