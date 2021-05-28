@@ -58,6 +58,18 @@
     <Compile Include="FormLab7.Designer.cs">
       <DependentUpon>FormLab7.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLab8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLab8.Designer.cs">
+      <DependentUpon>FormLab8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLab9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLab9.Designer.cs">
+      <DependentUpon>FormLab9.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +92,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLab7.resx">
       <DependentUpon>FormLab7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLab8.resx">
+      <DependentUpon>FormLab8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLab9.resx">
+      <DependentUpon>FormLab9.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>

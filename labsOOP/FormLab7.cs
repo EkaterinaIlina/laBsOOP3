@@ -6,7 +6,7 @@ namespace labsOOP
     public partial class FormLab7 : Form
     {
         float a=0, b=0, rez=0;
-        int operation;
+        char operation;
 
         public FormLab7()
         {
@@ -32,17 +32,17 @@ namespace labsOOP
                 b = Convert.ToSingle(textBoxSTR.Text);
             switch (operation)
             {
-                case 1:
+                case '+':
                     rez = a + b;
                     break;
-                case 2:
+                case '-':
                     rez = a - b;
                     break;
-                case 3:
+                case '*':
                     rez = a * b;
                     break;
 
-                case 4:
+                case '/':
                     if (b != 0)
                         rez = a / b;
                     else
@@ -50,61 +50,16 @@ namespace labsOOP
                     break;
             }
         }
-
-        private void buttonNumb1_Click(object sender, EventArgs e)
+        private void newOperation(object sender, EventArgs e)
         {
-            textBoxSTR.Text += 1;
-            textBoxSTR.Text = Check(textBoxSTR.Text);
+            Button button = (Button)sender;
+            operation = Convert.ToChar(button.Text);
+            a = Convert.ToSingle(textBoxSTR.Text);
+            textBoxSTR.Text = "0";
+            panelOperation.Enabled = false;
         }
-
-        private void buttonNumb2_Click(object sender, EventArgs e)
-        {
-            textBoxSTR.Text += 2;
-            textBoxSTR.Text = Check(textBoxSTR.Text);
-        }
-
-        private void buttonNumb3_Click(object sender, EventArgs e)
-        {
-            textBoxSTR.Text += 3;
-            textBoxSTR.Text = Check(textBoxSTR.Text);
-        }
-
-        private void buttonNumb4_Click(object sender, EventArgs e)
-        {
-            textBoxSTR.Text += 4;
-            textBoxSTR.Text = Check(textBoxSTR.Text);
-        }
-
-        private void buttonNumb5_Click(object sender, EventArgs e)
-        {
-            textBoxSTR.Text += 5;
-            textBoxSTR.Text = Check(textBoxSTR.Text);
-        }
-
-        private void buttonNumb6_Click(object sender, EventArgs e)
-        {
-            textBoxSTR.Text += 6;
-            textBoxSTR.Text = Check(textBoxSTR.Text);
-        }
-
-        private void buttonNumb7_Click(object sender, EventArgs e)
-        {
-            textBoxSTR.Text += 7;
-            textBoxSTR.Text = Check(textBoxSTR.Text);
-        }
-
-        private void buttonNumb8_Click(object sender, EventArgs e)
-        {
-            textBoxSTR.Text += 8;
-            textBoxSTR.Text = Check(textBoxSTR.Text);
-        }
-
-        private void buttonNumb9_Click(object sender, EventArgs e)
-        {
-            textBoxSTR.Text += 9;
-            textBoxSTR.Text = Check(textBoxSTR.Text);
-        }
-
+      
+       
         private void buttonNumb0_Click(object sender, EventArgs e)
         {
             textBoxSTR.Text += 0;
@@ -113,6 +68,7 @@ namespace labsOOP
 
         private void buttonPoint_Click(object sender, EventArgs e)
         {
+            if  (textBoxSTR.Text.Contains(",")==false)
             textBoxSTR.Text += ",";
         }
 
@@ -120,52 +76,33 @@ namespace labsOOP
         {
             textBoxSTR.Text = "0";
             rez = 0;
+            panelOperation.Enabled = true;
         }
 
         private void buttonBackspace_Click(object sender, EventArgs e)
         {
-            if (textBoxSTR.Text.Length > 0)
+            if (textBoxSTR.Text != "")
                 textBoxSTR.Text = textBoxSTR.Text.Remove(textBoxSTR.TextLength - 1, 1);
-            else
+            if (textBoxSTR.Text == "")
             {
-                MessageBox.Show("Введите число");
                 textBoxSTR.Text = "0";
                 rez = 0;
+                panelOperation.Enabled = true;
             }
         }
 
-        private void buttonSum_Click(object sender, EventArgs e)
+        private void button_Clic(object sender, EventArgs e            )
         {
-            a = Convert.ToSingle(textBoxSTR.Text);
-           textBoxSTR.Text = "0";
-            operation = 1;
-        }
-
-        private void buttonSubtraction_Click(object sender, EventArgs e)
-        {
-            a = Convert.ToSingle(textBoxSTR.Text);
-           textBoxSTR.Text = "0";
-            operation = 2;
-        }
-
-        private void buttonMultiplication_Click(object sender, EventArgs e)
-        {
-            a = Convert.ToSingle(textBoxSTR.Text);
-           textBoxSTR.Text = "0";
-            operation = 3;
+            Button button = (Button)sender;
+            textBoxSTR.Text += button.Text;
+            textBoxSTR.Text = Check(textBoxSTR.Text);
         }
 
         private void buttonRezult_Click(object sender, EventArgs e)
         {
             calculate();
             textBoxSTR.Text = rez.ToString();
-        }
-
-        private void buttonDivision_Click(object sender, EventArgs e)
-        {
-            a = Convert.ToSingle(textBoxSTR.Text);
-            textBoxSTR.Text = "0";
-            operation = 4;
+            panelOperation.Enabled = true;
         }
     }
 }

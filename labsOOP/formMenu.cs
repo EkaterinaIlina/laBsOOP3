@@ -37,12 +37,14 @@ namespace labsOOP
 
         private void linkLabelLab8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            FormLab8 formLab8 = new FormLab8();
+            formLab8.ShowDialog();
         }
 
         private void linkLabelLab9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            FormLab9 formLab9 = new FormLab9();
+            formLab9.ShowDialog();
         }
     }
 }
